@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie_flix</title>
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="html" href="./genres/action.html">
+</head>
+
+
+<body>
+
+    <!-- main container -->
+    <div class="container">
+        <!-- header section -->
+        <header>
+            <div class="navbar">
+
+                <!-- hamburger menu for small screen -->
+
+                <button class="navbar-menu-btn" id="menu-btn" ><i class="fa-solid fa-bars"></i></button>
+
+                <a href="#" class="navbar-brand"><i class="fa-solid fa-camera-retro"></i><span>Flix</span></a>
+
+                <!--navbar navigation-->
+                 <nav>
+                    <ul class="navbar-nav">
+                        <li><a href="#" class="navbar-link">Home</a></li>
+                        <li id="about"><a href="#about" class="navbar-link">About Us</a></li>
+                    </ul>
+                </nav>
+                <!-- search bar -->
+                <div class="navbar-actions">
+
+                    <form action="#" class="navbar-form">
+                        <input type="text" name="search" class="navbar-form-search" onmouseout="this.value = ''; this.blur();">
+                        <button class="navbar-form-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="movies">
+                
+                <div class="card-container">
+                    
+                    <div class="movie-card" value="">
+                        <img src="./assets/images/1917.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="title">1917</h2>
+                            <div class="card-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>7.8</span>
+                            </div>
+                            <p class="info"><span>Release Date: 2019-12-25</span></p>
+                            <p class="card-description"><span>Overview</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat, officia sit, eveniet doloribus sapiente vero laboriosam soluta quis iusto ipsum aspernatur porro modi! Nihil voluptates laudantium ipsam temporibus officiis! </p>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="filter-bar">
+
+                    <div class="filter-dropdown">
+                       <select name="" id="genre" class="genre">
+                            <option value="">select...</option>
+                            <option value="28">Action</option>
+                            <option value="12">Adventure</option>
+                            <option value="35">Comedy</option>
+                            <option value="16">Animation</option>
+                            <option value="10752">War</option>
+                            <option value="18">Drama</option>
+                            <option value="80">Crime</option>
+                            <option value="99">Documentary</option>
+                            <option value="10751">Family</option>
+                            <option value="14">Fantasy</option>
+                            <option value="36">History</option>
+                            <option value="27">Horror</option>
+                            <option value="9648">Mystery</option>
+                            <option value="53">Thriller</option>
+                            <option value="37">Western</option>
+                        </select>
+                    </div>
+                </div>
+                <h1 class="popular-title">Popular Movies</h1>
+                <div class="movies-grid">
+                    
+                    <div class="movies-card" value="">
+                        <div class="card-head">
+                        <img src="" alt="" class="card-img">
+                    
+                            <div class="card-overlay">
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>Rating: </span>
+                                </div>                        
+                            </div>
+                            <h3 class="card-title"></h3>
+                        </div>
+                    </div>
+                </div>
+                    
+
+            </section>
+
+
+            <!-- about section -->
+
+            <section class="about" id="about">
+                <h2 class="about-heading">About Us</h2>
+                <div class="about-card">
+                    <div class="card-content">
+                        <div class="card-item">
+                            <h3>Introduction</h3>
+                            <p>Welcome to our movie review website! We are passionate about movies and are dedicated to providing insightful reviews and analysis to help you make informed viewing decisions.</p>
+                        </div>
+                        <div class="card-item">
+                            <h3>Our Mission</h3>
+                            <p>Our mission is to deliver honest and unbiased reviews, celebrate the art of filmmaking, and promote diverse voices in cinema. We strive to be a trusted source for movie enthusiasts of all backgrounds.</p>
+                        </div>
+                        <div class="card-item">
+                            <h3>What We Provide</h3>
+                            <p>Our website offers a wide range of content including in-depth movie reviews, analysis, news, interviews with filmmakers, curated lists, and more. We aim to provide a comprehensive and engaging cinematic experience for our readers.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#"><i class="fa-solid fa-camera-retro"></i><span>Flix</span></a>
+                </div>
+                <p class="text">Follow Us On</p>
+                <div class="follow">
+                    
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>                    
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>                    
+                    <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>  
+                </div>
+                <div class="copyright">
+                    <p>copyright ©2024 by G.Praphul Chandra</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <!-- linking js file -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- linking font awesome -->
+    <script src="https://kit.fontawesome.com/cb48099442.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
