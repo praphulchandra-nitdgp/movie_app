@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nav.classList.toggle('active');
     });
 
-    // Initialize the existing feed
+    // Initializing the existing page
     fetchPopularMovies()
         .then(displayPopularMovies)
         .catch(error => console.error('Error fetching and displaying popular movies:', error));
@@ -210,7 +210,7 @@ async function displayMovieById(movieValue) {
         if (movieContainer) {
             movieContainer.innerHTML = '';
             const movieHTML = `
-                <div class="movie-card" value="${movie.id}">
+                
                     <img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt="" class="card-image">
                     <div class="card-body">
                         <h2 class="title">${movie.title}</h2>
@@ -219,9 +219,10 @@ async function displayMovieById(movieValue) {
                             <span> ${movie.vote_average}</span>
                         </div>
                         <p class="info"><span>Release Date: </span>${movie.release_date}</p>
-                        <p class="card-description"><span>Overview: </span><br>${movie.overview}</p>        
+                        <h1 class="overview-title">Overview: </h1>
+                        <p class="card-description"><br>${movie.overview}</p>        
                     </div>
-                </div>
+                
             `;
             movieContainer.insertAdjacentHTML('beforeend', movieHTML);
         } 
