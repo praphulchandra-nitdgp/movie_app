@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchPopularMovies()
         .then(displayPopularMovies)
         .catch(error => console.error('Error fetching and displaying popular movies:', error));
+
+    displayMovieById(19)
 });
 
 const searchForm = document.querySelector('.navbar-form');
@@ -27,14 +29,13 @@ function handleFormSubmit(event) {
     if (query) {
         searchMovies(query)
         .then(movies => {
-            // Clear the existing search results
+            // to clear the existing search results
             searchResultsContainer.innerHTML = '';
 
-            // Display the search results directly into the existing container
+            // to display the search results directly into original container
             movies.forEach(movie => {
                 const rating = movie.vote_average;
                 const rating_round = Math.round(rating * 10) / 10;
-                const movie_id = movie.id;
                 const movieHTML = `
                 <div class="movies-card" value="${movie.id}">
                     <div class="card-head">
@@ -185,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const clickedLink = event.target.closest('.movies-card');
         if (clickedLink) {
             const movieValue = clickedLink.getAttribute('value');
-            console.log(movieValue);
 
             try {
                 await displayMovieById(movieValue);
@@ -201,9 +201,7 @@ async function displayMovieById(movieValue) {
         const apiKey = '04c35731a5ee918f014970082a0088b1'; 
         const apiUrl = `https://api.themoviedb.org/3/movie/${movieValue}?api_key=${apiKey}`;
         const response = await fetch(apiUrl);
-        console.log("Response:", response); // Log the response
         const movie = await response.json();
-        console.log("Movie:", movie); // Log the movie data
 
         // Check if the movie container is present
         const movieContainer = document.querySelector('.movie-card');
