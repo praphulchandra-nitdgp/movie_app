@@ -767,7 +767,7 @@ footer{
         opacity: 1;
         color: #121212;
     }.navbar-menu-close-btn {
-        display: block; 
+        display: none; 
         font-size: 17px; 
         opacity: 1;
         color: #121212;
