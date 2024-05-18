@@ -46,7 +46,7 @@ function handleFormSubmit(event) {
                 const rating = movie.vote_average;
                 const rating_round = Math.round(rating * 10) / 10;
                 const movieHTML = `
-                <div class="movies-card" value="${movie.id}">
+                <a href="#overview1"><div class="movies-card" value="${movie.id}">
                     <div class="card-head">
                     <img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt="${movie.title}" class="card-img">
                 
@@ -58,7 +58,7 @@ function handleFormSubmit(event) {
                         </div>
                         <h3 class="card-title">${movie.title}</h3>
                     </div>
-                </div>
+                </div></a>
                 `;
                 searchResultsContainer.insertAdjacentHTML('beforeend', movieHTML);
             });
@@ -97,7 +97,7 @@ function displayPopularMovies(movies) {
         const rating = movie.vote_average;
         const rating_round = Math.round(rating * 10) / 10;
         const movieHTML = `
-        <div class="movies-card" value="${movie.id}">
+        <a href="#overview1"><div class="movies-card" value="${movie.id}">
             <div class="card-head">
                 <img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt="${movie.title}" class="card-img">
                 
@@ -109,7 +109,7 @@ function displayPopularMovies(movies) {
                 </div>
                 <h3 class="card-title">${movie.title}</h3>
             </div>
-        </div>
+        </div></a>
         `;
         searchResultsContainer.insertAdjacentHTML('beforeend', movieHTML);
     });
@@ -165,7 +165,7 @@ async function displayMoviesByGenre(genre) {
         const rating_round = Math.round(rating * 10) / 10;
 
         const movieHTML = `
-        <div class="movies-card" value="${movie.id}">
+        <a href="#overview1"><div class="movies-card" value="${movie.id}">
             <div class="card-head">
                 <img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt="${movie.title}" class="card-img">
                 
@@ -177,7 +177,7 @@ async function displayMoviesByGenre(genre) {
                 </div>
                 <h3 class="card-title">${movie.title}</h3>
             </div>
-        </div>
+        </div></a>
         `;
 
         genreContainer.insertAdjacentHTML('beforeend', movieHTML);
@@ -216,13 +216,15 @@ async function displayMovieById(movieValue) {
         const movieContainer = document.querySelector('.movie-card');
         if (movieContainer) {
             movieContainer.innerHTML = '';
+            const rating = movie.vote_average;
+            const rating_round = Math.round(rating * 10) / 10;
             const movieHTML = `
                     <div class= "card-image"><img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt=""></div>
                     <div class="card-body">
                         <h2 class="title">${movie.title}</h2>
                         <div class="card-rating">
                             <i class="fa-solid fa-star"></i>
-                            <span> ${movie.vote_average}</span>
+                            <span> ${rating_round}</span>
                         </div>
                         <p class="info"><span>Release Date: </span>${movie.release_date}</p>
                         <h1 class="overview-title">Overview: </h1>
