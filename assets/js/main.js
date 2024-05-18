@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(displayPopularMovies)
         .catch(error => console.error('Error fetching and displaying popular movies:', error));
 
-    displayMovieById(19)
+    displayMovieById(19)  //1248968 movies in total (checked manually)
 });
 
 const searchForm = document.querySelector('.navbar-form');
@@ -137,7 +137,7 @@ async function fetchMoviesByGenre(genre) {
         const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genre}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
-
+        console.log(data);
         return data;
     } catch (error) {
         console.error(`Error fetching movies for genre:`, error);
