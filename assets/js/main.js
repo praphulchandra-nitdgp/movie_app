@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(displayPopularMovies)
         .catch(error => console.error('Error fetching and displaying popular movies:', error));
 
-    displayMovieById(19)  //1248968 movies in total (checked manually)
+    // displayMovieById(19)  //1248968 movies in total (checked manually)
 });
 
 const searchForm = document.querySelector('.navbar-form');
@@ -77,7 +77,7 @@ async function fetchPopularMovies() {
     } catch (error) {
         console.error('Error fetching popular movies:', error);
         return [];
-    }sf
+    }
 } 
 
 // Function to display popular movies in the existing feed
