@@ -382,7 +382,7 @@ footer{
     margin-top: 70px;
 }
 .card-container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 80vh;
@@ -430,8 +430,6 @@ footer{
     color: #02020b;
 }
 .card-description {
-    margin-left: -50px;
-    margin-right: 20px;
     font-size: 15px;
     text-align: center;
     overflow: scroll;
@@ -906,16 +904,15 @@ footer{
 }
 
 @media only screen and (max-width: 760px){
-    .overview-bar{
-        height: 80vh;
-
+    .card-container{
+        margin: 0 200px;
     }
-    
     .movie-card {
         width: 100%;
         height: 80%;
         margin-bottom: 10px;
         margin-top: 80px;
+        padding: 0 80px;
         display: flex;
         flex-direction: column;
     }

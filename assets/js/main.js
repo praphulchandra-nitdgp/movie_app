@@ -223,6 +223,9 @@ async function displayMovieById(movieValue) {
                 
             `;
             movieContainer.insertAdjacentHTML('beforeend', movieHTML);
+            
+            document.querySelector('.card-container').style.display = 'flex';
+
         } 
         
     } catch (error) {
