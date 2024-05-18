@@ -77,8 +77,8 @@ async function fetchPopularMovies() {
     } catch (error) {
         console.error('Error fetching popular movies:', error);
         return [];
-    }
-}
+    }sf
+} 
 
 // Function to display popular movies in the existing feed
 function displayPopularMovies(movies) {
