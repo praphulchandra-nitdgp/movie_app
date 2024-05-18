@@ -58,10 +58,9 @@ header,nav{
 .container{
     max-width: 100%;
     margin: auto;
-    /*background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
-    background: #4b6cb7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #4b6cb7; 
+    background: -webkit-linear-gradient(to bottom, #182848, #4b6cb7);  
+    background: linear-gradient(to bottom, #182848, #4b6cb7);
 
 }
 .navbar{
@@ -77,6 +76,23 @@ header,nav{
 .navbar-menu-btn{
     display: none;
 }
+ .navbar-menu-close-btn {
+    display: none; 
+    
+} 
+
+/* .navbar.open .navbar-menu-close-btn {
+    display: block;
+}
+
+.navbar.open .navbar-menu-btn {
+    display: none; 
+}
+
+.navbar.open .navbar-nav {
+    display: block; 
+}  */
+
 nav{
     margin-right: 200px;
 }
@@ -541,13 +557,33 @@ footer{
         opacity: 1;
         color: #121212;
     }
-    /* to show nav bar when it is active */
-    .navbar-menu-btn.active ~ nav {
-        display: block;
+    .navbar-menu-close-btn {
+        display: none; 
+        font-size: 20px; 
+        opacity: 1;
+        color: #121212;
+        z-index: 100;
+    }
 
+    /* to show nav bar when it is active */
+    /* .navbar-menu-btn.active ~ nav {
+        display: block;
     }
     .navbar-menu-btn.active .fa-bars {
         display: block;
+    } */
+
+    header.active nav.active {
+        display: block;
+    }
+    
+    header nav {
+        display: none; 
+    }
+    
+    /* Ensure proper positioning and behavior */
+    .navbar {
+        position: relative;
     }
     .navbar-actions {
         width: fit-content;
@@ -730,15 +766,32 @@ footer{
         font-size: 17px; 
         opacity: 1;
         color: #121212;
+    }.navbar-menu-close-btn {
+        display: block; 
+        font-size: 17px; 
+        opacity: 1;
+        color: #121212;
+        z-index: 100;
     }
     /* to show nav bar when it is active */
-    .navbar-menu-btn.active ~ nav {
+
+    header.active nav.active {
+        display: block;
+    }
+    
+    header nav {
+        display: none; 
+    }
+    
+    /* .navbar-menu-btn.active ~ nav {
         display: block;
 
     }
     .navbar-menu-btn.active .fa-bars {
         display: block;
-    }
+    } */
+
+
         .navbar-actions {
         width: fit-content;
         height: fit-content;

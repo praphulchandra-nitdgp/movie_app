@@ -1,21 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navbarMenuBtn = document.querySelector('.navbar-menu-btn');
+    const closeBtn = document.querySelector('.navbar-menu-close-btn');
     const header = document.querySelector('header');
     const nav = document.querySelector('nav');
 
     navbarMenuBtn.addEventListener('click', function() {
-        navbarMenuBtn.classList.toggle('active');
-        header.classList.toggle('active');
-        nav.classList.toggle('active');
+        navbarMenuBtn.style.display = 'none';
+        closeBtn.style.display = 'block';
+        header.classList.add('active');
+        nav.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', function() {
+        closeBtn.style.display = 'none';
+        navbarMenuBtn.style.display = 'block';
+        header.classList.remove('active');
+        nav.classList.remove('active');
     });
 
     // Initializing the existing page
     fetchPopularMovies()
         .then(displayPopularMovies)
         .catch(error => console.error('Error fetching and displaying popular movies:', error));
-
-    // displayMovieById(19)  //1248968 movies in total (checked manually)
 });
+
+
 
 const searchForm = document.querySelector('.navbar-form');
 const searchInput = document.querySelector('.navbar-form-search');
