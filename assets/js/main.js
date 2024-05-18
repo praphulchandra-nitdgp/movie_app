@@ -208,8 +208,7 @@ async function displayMovieById(movieValue) {
         if (movieContainer) {
             movieContainer.innerHTML = '';
             const movieHTML = `
-                
-                    <img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt="" class="card-image">
+                    <div class= "card-image"><img src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}" alt=""></div>
                     <div class="card-body">
                         <h2 class="title">${movie.title}</h2>
                         <div class="card-rating">

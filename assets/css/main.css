@@ -393,6 +393,7 @@ footer{
     height: 80%;
     margin-top: 60px;
     margin-bottom: 10px;
+    padding: 10px 50px;
     border-radius: 15px;
     position: absolute;
     display: flex;
@@ -400,14 +401,18 @@ footer{
     z-index: 3;
 }
 
-.card-image{
-    position: relative;
+/* .card-image{
     height: 60%;
-    display: block;
     object-fit: contain;
-    margin-left: -15px;
-    margin-top: 7px;
+    background-color: #4b6cb7;
 
+} */
+.card-image img{
+    height: 390px;
+    width: 140%;
+    border-radius: 15px;
+
+    
 }
 .card-rating{
     font-size: 20px;
@@ -417,6 +422,7 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-left: 100px ;
 }
 
 .title {
@@ -430,6 +436,7 @@ footer{
     color: #02020b;
 }
 .card-description {
+    margin-right: 10px;
     font-size: 15px;
     text-align: center;
     overflow: scroll;
@@ -863,12 +870,19 @@ footer{
         height: 80%;
         margin-bottom: 10px;
         margin-top: 110px;
+        padding: 10px 40px;
     }
-    .card-image{
-        height: 60%;
+    /* .card-image{
+        height: 40%;
         margin-top: 7px;
         margin-left: 20px;
         margin-right: 20px;
+    } */
+    .card-image img{
+        height: 300px;
+        width: 200px;
+        border-radius: 15px;
+        
     }
     .card-rating{
         font-size: 17px;
@@ -904,21 +918,26 @@ footer{
 }
 
 @media only screen and (max-width: 760px){
-    .card-container{
-        margin: 0 200px;
-    }
     .movie-card {
-        width: 100%;
+        width: 90%;
         height: 80%;
         margin-bottom: 10px;
         margin-top: 80px;
-        padding: 0 80px;
+        padding: 0 60px;
         display: flex;
         flex-direction: column;
     }
-    .card-image{
+    /* .card-image{
         height: 40%;
         margin-top: 7px;
+    } */
+    .card-image img{
+        height: 80%;
+        width: 200px;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: calc(50% - 100px);
+        
     }
     .card-rating{
         font-size: 17px;
